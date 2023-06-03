@@ -39,7 +39,11 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 <td><?php echo $r["umur"] ?></td>
                 <td><?php echo $r["alamat"] ?></td>
                 <td><?php echo $r["jenis_kelamin"] ?></td>
-                <td><a href="edit.php?id=<?php echo $r['id'] ?>" >edit</a></td>
+                <td>
+                    <a href="edit.php?id=<?php echo $r['id'] ?>" >edit</a>
+                    <a href="delete.php?id=<?php echo $r['id'] ?>">Delete</a>
+                </td>
+                
             </tr>
         <?php endforeach ?>
 
