@@ -29,6 +29,7 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
             <th>umur</th>
             <th>alamat</th>
             <th>jenis_kelamin</th>
+            <th>Options</th>
         </tr>
 
         <?php foreach ($result as $r) : ?>
@@ -38,6 +39,7 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 <td><?php echo $r["umur"] ?></td>
                 <td><?php echo $r["alamat"] ?></td>
                 <td><?php echo $r["jenis_kelamin"] ?></td>
+                <td><a href="edit.php?id=<?php echo $r['id'] ?>" >edit</a></td>
             </tr>
         <?php endforeach ?>
 

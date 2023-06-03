@@ -7,7 +7,7 @@ $umur = $_POST["umur"];
 $alamat = $_POST["alamat"];
 $jenis_kelamin = $_POST["jenis_kelamin"];
 
-$insert = mysqli_query($conn, "INSERT INTO karyawan SET nama='$nama', umur='$umur', alamat='$alamat', jenis_kelamin='$jenis_kelamin' ");
+$insert = mysqli_query($conn, "INSERT INTO tbl_animeku SET fullname='$fullname', umur='$umur', alamat='$alamat', jenis_kelamin='$jenis_kelamin' ");
 
 if (!$insert) {
     echo "Gagal Menambahkan Data";
