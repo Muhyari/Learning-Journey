@@ -1,7 +1,10 @@
 <?php
 
 include("connection.php");
-$query = mysqli_query($conn, "SELECT * FROM `karyawan` LIMIT 10");
+
+$keyword = $_GET["keyword"];
+
+$query = mysqli_query($conn, "SELECT * FROM `karyawan` WHERE nama LIKE '%$keyword%' LIMIT 10");
 $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
 ?>
